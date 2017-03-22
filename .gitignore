@@ -36,5 +36,13 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# vim swap files
+*.swo
+*.swp
+
 .DS_Store
 .vscode
+tslint.json
+node_modules/
+yarn.lock
+
