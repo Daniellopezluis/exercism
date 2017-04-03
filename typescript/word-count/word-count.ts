@@ -1,17 +1,23 @@
+export interface IMyType {
+    [key: string]: number;
+
+}
+
 export default class Words {
     constructor () {}
 
     count(sentence: string){
-        let wordsAray: string[] = sentence.replace(/\s+/, ' ').split(' ');
-        let total = {};
+        let wordsArray: string[] = sentence.replace(/\s+/, ' ').split(' ');
+        let total: IMyType = {};
 
-        for(let i = 0; i < wordsAray.length; i++){
-            if(!(total.hasOwnProperty(wordsAray[i]))){
-                total[wordsAray[i]] = 0;
+        for(let i = 0; i < wordsArray.length; i++){
+            if(!(total.hasOwnProperty(wordsArray[i]))){
+                total[wordsArray[i]] = 0;
             }
-            ++total[wordsAray[i]];
+            ++total[wordsArray[i]];
         }
-        return words;
+        console.log(total);
+        return total;
 
     }
 }
